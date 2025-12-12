@@ -1,0 +1,6 @@
+{{ if not .IsHome }}
+<a href="{{ "" | relURL }}" class="title">
+  <h2>{{ .Site.Title }}</h2>
+</a>
+{{ end }}
+<nav>{{- partial "nav.html" . -}}</nav>

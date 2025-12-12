@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Analysis I | Felix Breuer</title>
+<meta name="title" content="Analysis I" />
+<meta name="description" content="Analysis I FS24
+Zusammenfassungen der Übungsstunden
+Week 1
+Week 2
+Week 3
+Week 4
+Week 5
+Week 6
+Week 7
+Week 8
+Week 9
+Week 10
+Week 11
+Week 12
+Aufgaben aus der finalen Übungsstunde
+Aufgaben
+Lösungen
+Tipps zur Prüfungsvorbereitung
+Ich empfehle, den Fokus bei der Vorbereitung vor allem auf das Lösen von Übungsaufgaben zu legen - sowohl mit den Übungsblättern als auch alten Prüfungen. Informationen zur Prüfung kann man auf der Vorlesungswebsite finden (beachte den Hinweis zum Lernen mit alten Prüfungen)." />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="http://localhost:1313/teaching/analysis_i/">
+  <meta property="og:site_name" content="Felix Breuer">
+  <meta property="og:title" content="Analysis I">
+  <meta property="og:description" content="Analysis I FS24 Zusammenfassungen der Übungsstunden Week 1
+Week 2
+Week 3
+Week 4
+Week 5
+Week 6
+Week 7
+Week 8
+Week 9
+Week 10
+Week 11
+Week 12
+Aufgaben aus der finalen Übungsstunde Aufgaben
+Lösungen
+Tipps zur Prüfungsvorbereitung Ich empfehle, den Fokus bei der Vorbereitung vor allem auf das Lösen von Übungsaufgaben zu legen - sowohl mit den Übungsblättern als auch alten Prüfungen. Informationen zur Prüfung kann man auf der Vorlesungswebsite finden (beachte den Hinweis zum Lernen mit alten Prüfungen).">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="teaching">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Analysis I">
+  <meta name="twitter:description" content="Analysis I FS24 Zusammenfassungen der Übungsstunden Week 1
+Week 2
+Week 3
+Week 4
+Week 5
+Week 6
+Week 7
+Week 8
+Week 9
+Week 10
+Week 11
+Week 12
+Aufgaben aus der finalen Übungsstunde Aufgaben
+Lösungen
+Tipps zur Prüfungsvorbereitung Ich empfehle, den Fokus bei der Vorbereitung vor allem auf das Lösen von Übungsaufgaben zu legen - sowohl mit den Übungsblättern als auch alten Prüfungen. Informationen zur Prüfung kann man auf der Vorlesungswebsite finden (beachte den Hinweis zum Lernen mit alten Prüfungen).">
+
+
+
+
+  <meta itemprop="name" content="Analysis I">
+  <meta itemprop="description" content="Analysis I FS24 Zusammenfassungen der Übungsstunden Week 1
+Week 2
+Week 3
+Week 4
+Week 5
+Week 6
+Week 7
+Week 8
+Week 9
+Week 10
+Week 11
+Week 12
+Aufgaben aus der finalen Übungsstunde Aufgaben
+Lösungen
+Tipps zur Prüfungsvorbereitung Ich empfehle, den Fokus bei der Vorbereitung vor allem auf das Lösen von Übungsaufgaben zu legen - sowohl mit den Übungsblättern als auch alten Prüfungen. Informationen zur Prüfung kann man auf der Vorlesungswebsite finden (beachte den Hinweis zum Lernen mit alten Prüfungen).">
+  <meta itemprop="wordCount" content="182">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  display: false }
+      ]
+    });
+  });
+</script>
+
+<style>
+  .home-hero{
+    display:flex;
+    align-items:center;         
+    justify-content:space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .home-hero__text{ flex: 1 1 320px; }
+  .home-hero__img{
+    flex: 0 0 auto;
+    width: 180px;
+    max-width: 40vw;
+    border-radius: 14px;
+    display:block;
+    margin-left:auto;           
+  }
+</style>
+
+<style>
+  .home nav { margin-top: 1.5rem; }  
+</style>
+
+</head>
+
+<body>
+  <header>
+<a href="/" class="title">
+  <h2>Felix Breuer</h2>
+</a>
+
+<nav>
+<a href="/">About</a>
+
+<a href="/teaching/">Teaching</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="analysis-i-fs24">Analysis I FS24</h1>
+<h2 id="zusammenfassungen-der-übungsstunden">Zusammenfassungen der Übungsstunden</h2>
+<p><a href="week1.pdf">Week 1</a></p>
+<p><a href="week2.pdf">Week 2</a></p>
+<p><a href="week3.pdf">Week 3</a></p>
+<p><a href="week4.pdf">Week 4</a></p>
+<p><a href="week5.pdf">Week 5</a></p>
+<p><a href="week6.pdf">Week 6</a></p>
+<p><a href="week7.pdf">Week 7</a></p>
+<p><a href="week8.pdf">Week 8</a></p>
+<p><a href="week9.pdf">Week 9</a></p>
+<p><a href="week10.pdf">Week 10</a></p>
+<p><a href="week11.pdf">Week 11</a></p>
+<p><a href="week12.pdf">Week 12</a></p>
+<h2 id="aufgaben-aus-der-finalen-übungsstunde">Aufgaben aus der finalen Übungsstunde</h2>
+<p><a href="exercises.pdf">Aufgaben</a></p>
+<p><a href="solutions.pdf">Lösungen</a></p>
+<h2 id="tipps-zur-prüfungsvorbereitung">Tipps zur Prüfungsvorbereitung</h2>
+<p>Ich empfehle, den Fokus bei der Vorbereitung vor allem auf das Lösen von Übungsaufgaben zu legen - sowohl mit den Übungsblättern als auch alten Prüfungen. Informationen zur Prüfung kann man auf der <a href="https://metaphor.ethz.ch/x/2024/fs/401-0212-16L/">Vorlesungswebsite</a> finden (beachte den Hinweis zum Lernen mit alten Prüfungen).</p>
+<p>Cheatsheets anderer Studierender aus Vorjahren sind <a href="https://exams.vis.ethz.ch/category/Analysis">hier</a> zu finden.</p>
+<p><a href="https://metaphor.ethz.ch/x/2022/fs/401-0212-16L/ex/s15.pdf">Sammlung von Aufgaben aus alten Prüfungen</a> mit <a href="https://metaphor.ethz.ch/x/2022/fs/401-0212-16L/ex/l15.pdf">Lösungen</a>.</p>
+<p><a href="https://www.geogebra.org/classic/Qnwp27vf">Riemann-Integral</a></p>
+<p><a href="https://www.geogebra.org/m/CfwjsmHx">Riemann-Summen</a></p>
+<p><a href="https://moodle-app2.let.ethz.ch/course/view.php?id=17981">Integral-Trainer</a></p>
+<h2 id="resources">Resources</h2>
+<p><strong>Course site</strong> (lecture schedule, notes, exercises): <a href="https://metaphor.ethz.ch/x/2024/fs/401-0212-16L/">https://metaphor.ethz.ch/x/2024/fs/401-0212-16L/</a></p>
+<p>I personally recommend to do as many of the exercises as possible - I believe one can learn the most this way!</p>
+<p><br/><br/></p>
+<p>Some textbooks that I personally like and can recommend! I used these myself and some of the exercises discussed in the sessions are from them.</p>
+<ul>
+<li><a href="https://link.springer.com/book/10.1007/978-1-4939-2712-8">Understanding Analysis</a></li>
+<li><a href="https://eth.swisscovery.slsp.ch/permalink/41SLSP_ETH/lshl64/alma990099906700205503">Michaels Analysis</a></li>
+<li><a href="https://metaphor.ethz.ch/x/2023/hs/401-1261-07L/ex/LectureNotes.pdf">D-MATH Analysis I Script</a></li>
+</ul>
+<p>Videos on some preliminaries/topics of Analysis 1:</p>
+<ul>
+<li><a href="https://www.3blue1brown.com/topics/calculus">https://www.3blue1brown.com/topics/calculus</a></li>
+<li><a href="https://www.3blue1brown.com/topics/lockdown-math">https://www.3blue1brown.com/topics/lockdown-math</a></li>
+</ul>
+<p>Often, Wikipedia has helpful visualizations/GIFs on certain definitions</p>
+
+</content>
+
+
+
+<p>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

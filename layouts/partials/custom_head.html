@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  display: false }
+      ]
+    });
+  });
+</script>
+
+<style>
+  .home-hero{
+    display:flex;
+    align-items:center;        /* vertically centered */
+    justify-content:space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .home-hero__text{ flex: 1 1 320px; }
+  .home-hero__img{
+    flex: 0 0 auto;
+    width: 180px;
+    max-width: 40vw;
+    border-radius: 14px;
+    display:block;
+    margin-left:auto;          /* keeps it on the right */
+  }
+</style>
+
+<style>
+  .home nav { margin-top: 1.5rem; } /* tweak value */
+</style>
+

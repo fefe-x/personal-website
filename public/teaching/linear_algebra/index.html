@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Linear Algebra | Felix Breuer</title>
+<meta name="title" content="Linear Algebra" />
+<meta name="description" content="Linear Algebra HS23
+Week 1: Vectors and linear combinations
+
+Recommended: Chapters 0-2 of 3b1b Essence of Linear Algebra (see Resources)
+
+Week 2: Linear independence, dot product
+
+Recommended: Chapter 3 of 3b1b Essence of Linear Algebra (see Resources)
+
+Week 3: Matrix multiplication, CR decomposition, Gaussian Elimination
+
+This book has a good and more in depth explanation of Gaussian Elimination
+
+Week 4: solution set of SLE, inverse of a matrix and how to find it, LU decomposition
+
+My approach for solving the Moodle quiz &ldquo;(In)dependent columns in 3 by 3 matrix&rdquo; can be found here
+
+Week 5: LU decomposition continued, vector spaces, subspaces, basis, dimension, column/null space
+Week 6: Column and null space of a matrix, how to compute a basis for them, revision of concepts from previous weeks
+Week 7: RREF, general solution of SLE, geometric interpretation of matrix vector multiplication, fundamental subspaces
+
+
+Animations: 1  2  3  4, code" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="http://localhost:1313/teaching/linear_algebra/">
+  <meta property="og:site_name" content="Felix Breuer">
+  <meta property="og:title" content="Linear Algebra">
+  <meta property="og:description" content="Linear Algebra HS23 Week 1: Vectors and linear combinations Recommended: Chapters 0-2 of 3b1b Essence of Linear Algebra (see Resources) Week 2: Linear independence, dot product Recommended: Chapter 3 of 3b1b Essence of Linear Algebra (see Resources) Week 3: Matrix multiplication, CR decomposition, Gaussian Elimination This book has a good and more in depth explanation of Gaussian Elimination Week 4: solution set of SLE, inverse of a matrix and how to find it, LU decomposition My approach for solving the Moodle quiz “(In)dependent columns in 3 by 3 matrix” can be found here Week 5: LU decomposition continued, vector spaces, subspaces, basis, dimension, column/null space Week 6: Column and null space of a matrix, how to compute a basis for them, revision of concepts from previous weeks Week 7: RREF, general solution of SLE, geometric interpretation of matrix vector multiplication, fundamental subspaces Animations: 1 2 3 4, code">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="teaching">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Linear Algebra">
+  <meta name="twitter:description" content="Linear Algebra HS23 Week 1: Vectors and linear combinations Recommended: Chapters 0-2 of 3b1b Essence of Linear Algebra (see Resources) Week 2: Linear independence, dot product Recommended: Chapter 3 of 3b1b Essence of Linear Algebra (see Resources) Week 3: Matrix multiplication, CR decomposition, Gaussian Elimination This book has a good and more in depth explanation of Gaussian Elimination Week 4: solution set of SLE, inverse of a matrix and how to find it, LU decomposition My approach for solving the Moodle quiz “(In)dependent columns in 3 by 3 matrix” can be found here Week 5: LU decomposition continued, vector spaces, subspaces, basis, dimension, column/null space Week 6: Column and null space of a matrix, how to compute a basis for them, revision of concepts from previous weeks Week 7: RREF, general solution of SLE, geometric interpretation of matrix vector multiplication, fundamental subspaces Animations: 1 2 3 4, code">
+
+
+
+
+  <meta itemprop="name" content="Linear Algebra">
+  <meta itemprop="description" content="Linear Algebra HS23 Week 1: Vectors and linear combinations Recommended: Chapters 0-2 of 3b1b Essence of Linear Algebra (see Resources) Week 2: Linear independence, dot product Recommended: Chapter 3 of 3b1b Essence of Linear Algebra (see Resources) Week 3: Matrix multiplication, CR decomposition, Gaussian Elimination This book has a good and more in depth explanation of Gaussian Elimination Week 4: solution set of SLE, inverse of a matrix and how to find it, LU decomposition My approach for solving the Moodle quiz “(In)dependent columns in 3 by 3 matrix” can be found here Week 5: LU decomposition continued, vector spaces, subspaces, basis, dimension, column/null space Week 6: Column and null space of a matrix, how to compute a basis for them, revision of concepts from previous weeks Week 7: RREF, general solution of SLE, geometric interpretation of matrix vector multiplication, fundamental subspaces Animations: 1 2 3 4, code">
+  <meta itemprop="wordCount" content="438">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  display: false }
+      ]
+    });
+  });
+</script>
+
+<style>
+  .home-hero{
+    display:flex;
+    align-items:center;         
+    justify-content:space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .home-hero__text{ flex: 1 1 320px; }
+  .home-hero__img{
+    flex: 0 0 auto;
+    width: 180px;
+    max-width: 40vw;
+    border-radius: 14px;
+    display:block;
+    margin-left:auto;           
+  }
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Felix Breuer</h2>
+</a>
+<nav>
+<a href="/">About</a>
+
+<a href="/teaching/">Teaching</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="linear-algebra-hs23">Linear Algebra HS23</h1>
+<h3 id="week-1-vectors-and-linear-combinations"><a href="week1.pdf">Week 1: Vectors and linear combinations</a></h3>
+<ul>
+<li>Recommended: Chapters 0-2 of 3b1b Essence of Linear Algebra (see <a href="resources">Resources</a>)</li>
+</ul>
+<h3 id="week-2-linear-independence-dot-product"><a href="week2.pdf">Week 2: Linear independence, dot product</a></h3>
+<ul>
+<li>Recommended: Chapter 3 of 3b1b Essence of Linear Algebra (see <a href="resources">Resources</a>)</li>
+</ul>
+<h3 id="week-3-matrix-multiplication-cr-decomposition-gaussian-elimination"><a href="week3.pdf">Week 3: Matrix multiplication, CR decomposition, Gaussian Elimination</a></h3>
+<ul>
+<li>This <a href="https://www.math.brown.edu/streil/papers/LADW/LADW_2021_01-11.pdf#page=49">book</a> has a good and more in depth explanation of Gaussian Elimination</li>
+</ul>
+<h3 id="week-4-solution-set-of-sle-inverse-of-a-matrix-and-how-to-find-it-lu-decomposition"><a href="week4.pdf">Week 4: solution set of SLE, inverse of a matrix and how to find it, LU decomposition</a></h3>
+<ul>
+<li>My approach for solving the Moodle quiz &ldquo;(In)dependent columns in 3 by 3 matrix&rdquo; can be found <a href="quiz_approach">here</a></li>
+</ul>
+<h3 id="week-5-lu-decomposition-continued-vector-spaces-subspaces-basis-dimension-columnnull-space"><a href="week5.pdf">Week 5: LU decomposition continued, vector spaces, subspaces, basis, dimension, column/null space</a></h3>
+<h3 id="week-6-column-and-null-space-of-a-matrix-how-to-compute-a-basis-for-them-revision-of-concepts-from-previous-weeks"><a href="week6.pdf">Week 6: Column and null space of a matrix, how to compute a basis for them, revision of concepts from previous weeks</a></h3>
+<h3 id="week-7-rref-general-solution-of-sle-geometric-interpretation-of-matrix-vector-multiplication-fundamental-subspaces"><a href="week7.pdf">Week 7: RREF, general solution of SLE, geometric interpretation of matrix vector multiplication, fundamental subspaces</a></h3>
+<ul>
+<li>
+<p>Animations: <a href="1.mp4">1</a>  <a href="2.mp4">2</a>  <a href="3.mp4">3</a>  <a href="4.mp4">4</a>, <a href="scene.py">code</a></p>
+</li>
+<li>
+<p><a href="https://www.desmos.com/3d/d8fb99479d">Visualization of the fundamental four subspaces</a></p>
+</li>
+</ul>
+<h3 id="week-8-solutions-to-recap-exercise-and-quiz-tips-on-writing-proofs"><a href="week8.pdf">Week 8: Solutions to recap exercise and quiz, tips on writing proofs</a></h3>
+<ul>
+<li>This week we did a recap on the material covered in the first half of the course. The used material (exercises and quiz) can be found <a href="recap">here</a>.</li>
+</ul>
+<h3 id="week-9-fundamental-subspaces-least-squares-orthonormality"><a href="week9.pdf">Week 9: Fundamental subspaces, least squares, orthonormality</a></h3>
+<h3 id="week-10-projections-orthonormality-gram-schmidt-pseudoinverses"><a href="week10.pdf">Week 10: Projections, orthonormality, Gram-Schmidt, Pseudoinverses</a></h3>
+<h3 id="week-11-pseudoinverses-determinant"><a href="week11.pdf">Week 11: Pseudoinverses, Determinant</a></h3>
+<h3 id="week-12-determinant-complex-numbers-eigenvalues-and-eigenvectors"><a href="week12.pdf">Week 12: Determinant, Complex Numbers, Eigenvalues and eigenvectors</a></h3>
+<ul>
+<li>
+<p>You can find the quiz <a href="quiz12.pdf">here</a>.</p>
+</li>
+<li>
+<p>I collected a few short proof exercises <a href="proofs12.pdf">here</a> which I can recommend! Especially the statement of exercise 1 is quite interesting and important.</p>
+</li>
+<li>
+<p><a href="https://igl.ethz.ch/teaching/linear-algebra/la2020/notes/komplexe_zahlen.pdf">This pdf</a> contains on complex numbers and might be helpful for solving exercises 3,4,7 (they&rsquo;re quite extensive, the most important facts can be found in <a href="week12.pdf">my</a>).</p>
+</li>
+<li>
+<p><a href="https://www.math.brown.edu/streil/papers/LADW/LADW_2021_01-11.pdf#page=88">This book</a> has proofs on properties of the determinant if you&rsquo;re interested.</p>
+</li>
+</ul>
+<h3 id="week-13-change-of-basis-eigenvalue-decomposition-spectral-theorem"><a href="week13.pdf">Week 13: Change of basis, Eigenvalue decomposition, Spectral Theorem</a></h3>
+<ul>
+<li>You can find this week&rsquo;s quiz <a href="quiz13.pdf">here</a> and solutions in the.</li>
+</ul>
+<h3 id="week-14-singular-value-decomposition"><a href="week14.pdf">Week 14: Singular Value Decomposition</a></h3>
+<ul>
+<li>
+<p>You can find this week&rsquo;s quiz <a href="quiz14.pdf">here</a> and solutions in the.</p>
+</li>
+<li>
+<p><a href="https://timbaumann.info/svd-image-compression-demo/">Cool application of SVD: Image Compression</a></p>
+</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<p><strong>Course site</strong> (lecture schedule and): <a href="https://ti.inf.ethz.ch/ew/courses/LA23/index.html">https://ti.inf.ethz.ch/ew/courses/LA23/index.html</a></p>
+<p><strong>Course Moodle</strong> (exercises): <a href="https://moodle-app2.let.ethz.ch/course/view.php?id=20361">https://moodle-app2.let.ethz.ch/course/view.php?id=20361</a></p>
+<p>I personally recommend to do as many of the exercises as possible - I believe one can learn the most this way!</p>
+<p><br/><br/></p>
+<p>Videos that explain topics of linear algebra and show geometric interpretations:</p>
+<ul>
+<li><a href="https://www.3blue1brown.com/topics/linear-algebra">https://www.3blue1brown.com/topics/linear-algebra</a></li>
+</ul>
+<p>If you want to use linear algebra in code or test/compute stuff:</p>
+<ul>
+<li><a href="https://numpy.org/">https://numpy.org/</a> (Python)</li>
+<li><a href="https://www.wolframalpha.com/">https://www.wolframalpha.com/</a> (easy text input)</li>
+</ul>
+<p>Some textbooks that I personally like and can recommend! I personally think it&rsquo;s a good idea to use multiple textbooks: It might be that one author&rsquo;s way of explaining concepts works much better for you than that of others.</p>
+<ul>
+<li><a href="https://link.springer.com/book/10.1007/978-3-319-11080-6">Linear Algebra Done Right</a></li>
+<li><a href="https://www.math.brown.edu/streil/papers/LADW/LADW_2021_01-11.pdf">Linear Algebra Done Wrong</a></li>
+<li><a href="https://textbooks.math.gatech.edu/ila/">https://textbooks.math.gatech.edu/ila/</a></li>
+</ul>
+
+</content>
+
+
+
+<p>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>
