@@ -7,11 +7,11 @@ weight = 20
 
 ### [Week 1: Vectors and linear combinations](week1.pdf)
 
-- Recommended: Chapters 0-2 of 3b1b Essence of Linear Algebra (see [Resources](resources))
+- Recommended: Chapters 0-2 of 3b1b Essence of Linear Algebra (see [Resources](#resources))
 
 ### [Week 2: Linear independence, dot product](week2.pdf)
 
-- Recommended: Chapter 3 of 3b1b Essence of Linear Algebra (see [Resources](resources))
+- Recommended: Chapter 3 of 3b1b Essence of Linear Algebra (see [Resources](#resources))
 
 ### [Week 3: Matrix multiplication, CR decomposition, Gaussian Elimination](week3.pdf)
 
@@ -70,8 +70,6 @@ weight = 20
 **Course Moodle** (exercises): [https://moodle-app2.let.ethz.ch/course/view.php?id=20361](https://moodle-app2.let.ethz.ch/course/view.php?id=20361)
 
 I personally recommend to do as many of the exercises as possible - I believe one can learn the most this way!
-
-<br/><br/>
 
 Videos that explain topics of linear algebra and show geometric interpretations:
 - [https://www.3blue1brown.com/topics/linear-algebra](https://www.3blue1brown.com/topics/linear-algebra)

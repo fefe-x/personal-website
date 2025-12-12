@@ -15,12 +15,11 @@
 </script>
 
 <style>
+  /* Desktop: text left, image right */
   .home-hero{
     display:flex;
-    align-items:center;        /* vertically centered */
-    justify-content:space-between;
+    align-items:center;
     gap: 2rem;
-    flex-wrap: wrap;
   }
   .home-hero__text{ flex: 1 1 320px; }
   .home-hero__img{
@@ -29,9 +28,22 @@
     max-width: 40vw;
     border-radius: 14px;
     display:block;
-    margin-left:auto;          /* keeps it on the right */
+  }
+
+  /* Mobile: stack, image centered after text */
+  @media (max-width: 700px){
+    .home-hero{
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .home-hero__img{
+      width: 160px;      /* optional */
+      max-width: 70vw;   /* optional */
+      margin: 1rem auto 0;
+    }
   }
 </style>
+
 
 <style>
   .home nav { margin-top: 1.5rem; } /* tweak value */
