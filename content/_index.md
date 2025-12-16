@@ -14,7 +14,7 @@ Currently working on bandit convex optimization under supervision of Prof. Kevin
 
 I'm broadly interested in ML, theory, applied math and statistics.
 
-Some areas I'm exploring at the moment: bandits and online learning, optimization, AI alignment, RL reasoning, diffusion and flow models, history and philosophy of science.
+Some areas I'm exploring at the moment: bandits and online learning, optimization, AI alignment, LLM reasoning, diffusion and flow models, history and philosophy of science.
 
 
 - Contact: [felixgbreuer@gmail.com](mailto:felixgbreuer@gmail.com)
