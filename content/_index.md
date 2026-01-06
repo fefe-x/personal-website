@@ -22,7 +22,7 @@ Contact: [felixgbreuer@gmail.com](mailto:felixgbreuer@gmail.com)
 
 LinkedIn: [LinkedIn](https://www.linkedin.com/in/fbreuer/)
 
-  </div>
+</div>
   <img class="home-hero__img" src="/images/portrait.jpg" alt="Felix Breuer">
 </div>
 
