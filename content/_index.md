@@ -11,12 +11,10 @@ weight = 1
 
 CS @ ETH Zurich
 
-Currently working on bandit convex optimization under supervision of Prof. Kevin Jamieson and Alireza Bakhtiari.
-
 Some areas of interest:
 
 - Sequential decision making (bandits, RL), optimization, statistics
-- Understanding how statistics and ML are applied in practice (e.g. in industry, policy making) and where this differs from the theory; learning about and considering their social and historical context
+- Foundational theory with the goal of generating practical insights
 
 Contact: [felixgbreuer@gmail.com](mailto:felixgbreuer@gmail.com)
 
